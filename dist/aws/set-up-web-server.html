@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="description" content="Responsive Bootstrap 4 Magazine/Blog Theme">
+	<meta name="author" content="Bootlab">
+
+  <title>Computer Science X</title>
+
+  <link href="/css/app.css" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Playfair+Display" />
+
+  <style>
+    pre {
+        background-color: rgb(13, 7, 1);
+        color: white; 
+        border: 1px solid #ddd;
+        border-left: 7px solid green;
+        page-break-inside: avoid;
+        font-family: monospace;
+        font-size: 15px;
+        line-height: 1.6;
+        margin-bottom: 1.6em;
+        max-width: 100%;
+        overflow: auto;
+        padding: 1em 1.5em;
+        display: block;
+        word-wrap: break-word;
+    }
+    strong {
+        color: #6610f2; 
+        font-family: monospace;
+
+    }
+    p {
+      font-size: 20px;
+      color: #140035; 
+    }
+    
+  </style>
+
+  <link rel="icon" href="/img/logox.ico" sizes="any" />
+</head>
+<body>
+
+  <header>
+    <nav class="navbar navbar-expand-md navbar-light bg-white absolute-top">
+      <div class="container">
+
+        <button class="navbar-toggler order-2 order-md-1" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbar-left navbar-right" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <a href="/index.html">
+          <img src="/img/csxlogo.png" alt="CSX logo" style=";margin:0px 12px">
+        </a>
+
+        <div class="collapse navbar-collapse order-3 order-md-2" id="navbar-left">
+          <ul class="navbar-nav me-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="/index.html" style="font-size:16px; font-weight: bold;">Home</a>
+            </li>
+            <li class="nav-item dropdown active">
+              <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style=" font-size:16px; font-weight: bold;">Programming</a>
+              <div class="dropdown-menu" aria-labelledby="dropdown01">
+                <a class="dropdown-item" href="home-onecolumn.html" style="font-size:16px;">Python Basics</a>
+                <a class="dropdown-item" href="home-twocolumn.html" style="font-size:16px;">C Basics</a>
+              </div>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="dropdown02" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="font-size:16px; font-weight: bold;">Linux</a>
+              <div class="dropdown-menu" aria-labelledby="dropdown02">
+                <a class="dropdown-item" href="post-image.html" style="font-size:16px;">Basic Commands</a>
+                <a class="dropdown-item" href="post-video.html" style="font-size:16px;">'chmod' Command (change permissions of a file)</a>
+              </div>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="dropdown03" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="font-size:16px; font-weight: bold;">AWS</a>
+              <div class="dropdown-menu" aria-labelledby="dropdown03">
+                <a class="dropdown-item" href="post-image.html" style="font-size:16px;">Set up a Amazon Web Services (LAMP) web server</a>
+                <a class="dropdown-item" href="post-video.html" style="font-size:16px;">Video</a>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main class="main pt-4">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-9">
+          <article class="card card-outline mb-4">
+            <div class="card-body">
+              <header>
+                <h2 class="card-title">How to set up a web server for your website.</h2>
+              </header>
+              <p>On this page I will be teaching you how to set up an Amazon Web Services web server and point your domain name (ComputerScienceX.com) to the web server.</p>
+              <p>First go to amazon web services and sign up for a lightsail web server <a href="https://aws.amazon.com/lightsail/" target="_blank" rel="noopener noreferrer" style="color:blue;">AWS Lightsail</a>
+              . The first 3 months should be free. Go for the cheapest version.<br>For your Instance image choose Linux, and then for Blueprint select LAMP (like shown below).</p>
+              <img class="ratio ratio-16x9" src="/img/website/web8.png">
+              <p>and then create. This will create a web server(computer) running Linux and it will be using the lamp stack.<br>The reason we are using LAMP (Linux Apache MySQL and PHP) and not, let's say WordPress, is because we are uploading our HTML/CSS code directly to the web server. Word press is a tool for people who can't code basically. <br>When a user goes to our website it will load this HTML as a website.</p>
+              <br><p>After it's created go to the AWS(Amazon Web Services) Console and click on you Lighsail Instance that you have created.</p>
+              <p>If you have just created a new Lightsail instance, then you should need to create a static IP address. A static IP address will make it so that your IP address is fixed(won't change) to your web server.<br>click on your IP address and create a static IP. the settings are fine as default.</p>
+              <br>
+              <p>Now that we have created our web server. go to the connect tab and scroll down till it says connect to {static IP address} and username.</p>
+              <img class="ratio ratio-16x9" src="/img/website/web5.png">
+
+              <p>As we are computer scientists and we are using Linux as our server, we will need to use the Linux command prompt to communicate with our web server.</p>
+              <p>I have a tutorial for <a href="/linux/">learning the basics of linux</a> under the Computer Science Basics (For Cyber Security). If you already know basic Linux commands then that's great as it will be a lot more understandable with basic Linux knowledge.</p>
+              <p>For this first time connecting to our web server, click on connect using SSH (circled in purple below). This will then load up a terminal on our web server. so we are basically connected to and have control over our web server by using commands on the command prompt.</p>
+              <img class="ratio ratio-16x9" src="/img/website/web9.png">
+              <p>Once you get a bit more comfortable using the Linux commands line SSH, SCP etc. then you can just connect to the Linux web server through your own computer's terminal using the SSH program.</p>
+              <p>You should have a terminal window open up. It probably looks very confusing if you've never used Linux. But after a while, it's actually very simple to use.</p>
+              <p>Firstly type in this command</p>
+              <h3>cd htdocs</h3>
+              <p>and press Enter. This will change our directory to htdocs as that is what we told it to do.</p>
+              <p>This "htdocs" folder is the only folder that we will be using for the time being.</p>
+              <img class="ratio ratio-16x9" src="/img/website/web3.png">
+              <p><strong>Our website HTML code files will be placed in this folder and when we connect to the IP address associated with the server that we created earlier (the static IP), it will take us to the index (home) page of our website.</strong></p>
+              <p>Our home page/index page needs to be named "index.html" or "index.php". As when someone loads our website, it will automatically load up the index page./</p>
+
+              <p>Now that we have our web server set up hopefully. We can now cancel out of the lightsail instance terminal as we will now be using our command prompt on our computer to send our HTML files to the server.</p>
+              <p>So let's create a very basic HTML file on our computer</p>
+              <img class="ratio ratio-16x9" src="/img/website/web4.png">
+              <p>Here is a very basic HTML web page. I've saved it into the Desktop folder just because it's easier for me to find.</p>
+              <p>now we are going to send that file to our web server htdocs folder from doing 1 command on our computer.</p>
+              <p>Firstly go to our AWS console and the connect tab again like earlier. under IP address, it should say download lightsail default key.<br>Download that and store it with your index.html file(for easy access).</p>
+              <p>Now open up your terminal on your Mac(if you have one), if you're on Linux it should be a fairly similar process. If you're on windows then you need to think about your life choices. If you're on windows, search how to connect to ssh on windows. I think Putty is the program. Or you could install a virtual machine to use Linux, see my section on <a href="/cs/virtualisation.php">Virtual Machines</a></p>
+              <p>make sure you have "SCP" installed by typing "SCP" and then enter</p>
+              <p>Now we need to build our command to send our web page file to the server</p>
+              <!--<img class="ratio ratio-16x9" src="/img/website/web2.png">
+              <p><strong>I usually save my most used commands in my MacBooks notes (for easy access and makes it easier to edit/copy the commands). for example:</strong></p>
+              <img class="ratio ratio-16x9" src="/img/website/ss1.png">-->
+              <p>So the command we created is:</p>
+              <pre>
+                <code>
+sudo scp -ri ~/Documents/lightsail-key/LightsailDefaultKey-eu-west-2csx.pem ~/Desktop/csx/dist/* bitnami@18.134.164.140:~/htdocs                </code>
+              </pre>
+              
+              <br>
+              <p>I will go through this command and explain what each part does.</p>
+              <p><strong>sudo</strong></p>
+              <p>Sudo means "super user do", which basically means it will run whichever command/program you are running as the admin user/ root user/ higher privileges on your system. Basically the same as right-clicking on a windows program and running it as administrator.</p>
+              <p><strong>scp</strong></p>
+              <p>scp is the program that we will be using to send files to our web server.</p>
+              <p><strong>-i</strong></p>
+              <p>This is a parameter for the SCP command. You can add a parameter to most commands. "-i" means that the SCP web server will be using a key pass file (Lighsail key thing we downloaded earlier) to confirm you are the owner. is basically the same as having a password for access. I guess they use a key pass file so you can automate logging in/ changing website content automatically without any human having to type a password and that.</p>
+              <p><strong>/Desktop/lightsail-keys/LightsailDefaultKey-eu-west-2csx.pem</strong></p>
+              <p>This part is basically telling the program where the key file is located. ~/ that basically is a shortcut for the home directory.</p>
+              <p><strong>~/Desktop/csx/dist/*</strong></p>
+              <p>This next bit is telling the program which file/s that we want to send. The '*' sign is saying we want to include all files in the dist folder.</p>
+              <p><strong>bitnami@18.134.164.140:~/htdocs</strong></p>
+              <p>This last bit is specifying the web server and the location on the web server where we want our index.html file to be located</p>
+              <p>bitnami is the username. the IP address is the static IP that we created earlier. and the part after that is the location where we want to store our files. Like I sais before I would recommend /home/bitnami/htdocs as this is where the website contents will be run from (as discussed earlier). Make sure you don't delete the htdocs file, as if you do and create a new one with the same name it won't work.</p>
+              <p> Your folder structure should look something like this. when your website gets larger, you should consider organising pictures, web pages, etc. into folders, and then direct the links to these folders. for example "/pics/linux/screenshot1.png"</p>
+
+              <img class="ratio ratio-16x9" src="/img/website/screen1.png">
+              <p>If we go to our AWS console and go to our lightsail instance and connect to the terminal through our browser, we should see something like this:</p>
+              <img class="ratio ratio-16x9" src="/img/website/web6.png">
+              <p>As you can see we change directory (cd) into the htdocs folder, which is where our HTML/ PHP code will run automatically. our index.php or index.html file will be the homepage of our website. which means when you go to your web address associated with your domain (ComputerScienceX.com) you will automatically be taken to that index file.</p>
+              <br>
+              <img class="ratio ratio-16x9" src="/img/website/vb.png">
+              <br>
+              <h4><a href="https://visualstudio.microsoft.com" target="_blank" rel="noopener noreferrer" style="color:blue;">Visual Studio</a> is probably the best code editor for web programming. very nice to use.</h4>
+              <br>
+              <h3>How to buy a domain name (CopmuterScienceX.com) and point that domain to our web server.</h3>
+              <p>First buy your domain. I used GoDaddy to buy my domain. This is a UK website. decent price and most popular. That's why I used them.</p>
+              <p>After you've bought your domain. you need to go to the DNS Management part for your domain.</p>
+              <img class="ratio ratio-16x9" src="/img/website/dns.png">
+              <p>You will need to edit or add to "A" record. and add your IP address for the static IP that was created for our AWS Lightsail web server from earlier like pictured above. and change the CNAME to your domain I think (ComputerScienceX.com). this should update the DNS records on go daddy. Updating the public DNS records basically means, when a user goes to your domain name (ComputerScienceX.com) it will basically be automatically redirected to your web server's IP address which will be hosting your website files to display to the user.</p>
+              <p><a href="https://www.cloudflare.com" target="_blank" rel="noopener noreferrer" style="color:blue;">Cloudflare</a>
+                provide free SSL, nameserver management, DDoS protection etc. for your domain. SSL is what changes your website from HTTP:// to HTTPS://, which basically makes it so that the data the user requests from the server (for example the HTML/CSS code) will be encrypted end to end. Meaning anyone sniffing your browser data or looking at it (ISP) it will be encrypted.</p>
+              <br>
+            </div>
+          </article><!-- /.card -->
+
+          <nav aria-label="...">
+            <ul class="pagination justify-content-center">
+              <li class="page-item">
+                <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Previous</a>
+              </li>
+              <li class="page-item active" aria-current="page">
+                <a class="page-link" href="/aws/set-up-web-server.html">1 <span class="sr-only"></span></a>
+              </li>
+              <li class="page-item"><a class="page-link" href="/index.html">2</a></li>
+              <li class="page-item"><a class="page-link" href="/index.html">3</a></li>
+              <li class="page-item">
+                <a class="page-link" href="#">Next</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <div class="col-md-3 ms-auto">
+
+          <aside class="sidebar">
+            <div class="card mb-4">
+              <div class="card-body">
+                <div class="k2-author">
+                  <img class="author-pic" src="/img/self1.JPG" alt="Author bio image" width="80" height="80" />
+                  
+                  <br>
+                  <h2 style="font-size: 12px;" >Posted on <strong style="font-size: 14px; color: blue;">26 November 2022<br>(<time class="timeago" datetime="2022-11-26 17:00"></time>)</strong><br>by <strong style="font-size: 14px;color: #6610f2;"><a href="/about-person/james.html">James English</a></strong></h2>
+                  
+
+                  <p style="font-size: 12px; font-weight: bold;">Canterbury, England</p>
+                  
+                  </div>
+                   
+                  <style>
+                    .k2-author{
+                    border: 2px rgba($gray-600);
+                      background-color: #FFFFFF;
+                      text-align: center;
+                      padding: ;
+                      border-radius: 10px;
+                      }
+                    /*profile photo */
+                    .author-pic{
+                      background-color: #4C4A4B;
+                      border: 1px;
+                      border-radius: 100px;
+                    }
+                    </style>
+              </div>
+            </div><!-- /.card -->
+          </aside>
+
+          <aside class="sidebar sidebar-sticky">
+            <div class="card mb-4">
+              <div class="card-body">
+                <h4 class="card-title">Tags</h4>
+                <a class="btn btn-light btn-sm mb-1" href="page-category.html">Programming</a>
+                <a class="btn btn-light btn-sm mb-1" href="page-category.html">Linux</a>
+                <a class="btn btn-light btn-sm mb-1" href="page-category.html">Networking</a>
+                <a class="btn btn-light btn-sm mb-1" href="page-category.html">AWS</a>
+                <a class="btn btn-light btn-sm mb-1" href="page-category.html">HTML/CSS</a>
+              </div>
+            </div><!-- /.card -->
+            <div class="card mb-4">
+              <div class="card-body">
+                <h4 class="card-title">Popular tutorials</h4>
+
+                <a href="post-image.html" class="d-inline-block">
+                  <h4 class="h6">Python Programming for Begninners</h4>
+                  <img class="card-img" src="img/linux/linux1.jpg" alt="" />
+                </a>
+                <time class="timeago" datetime="2022-11-25 17:00">11 November 2022</time> in Programming
+
+                <a href="post-image.html" class="d-inline-block mt-3">
+                  <h4 class="h6">C Programming for Begninners</h4>
+                  <img class="card-img" src="img/linux/linux1.jpg" alt="" />
+                </a>
+                <time class="timeago" datetime="2022-11-25 17:00">11 November 2022</time> in Programming
+
+              </div>
+            </div><!-- /.card -->
+          </aside>
+
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <footer class="site-footer bg-dark">
+    <div class="container">
+      <ul class="nav justify-content-center">
+        <li class="nav-item">
+          <a class="nav-link" href="#">Programming</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Linux</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Networking</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">AWS</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="page-contact.html">HTML/CSS</a>
+        </li>
+      </ul>
+      <div class="copy">
+        &copy; Computer Science X 2022<br />
+        All rights reserved
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/app.js"></script>
+</body>
+</html>
